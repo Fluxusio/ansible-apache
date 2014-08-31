@@ -7,6 +7,7 @@ galaxy_info:
   platforms:
     - Ubuntu 14.04
   categories:
-    - php
+    - web
+    - apache
 
 dependencies: []
