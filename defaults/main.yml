@@ -1,0 +1,10 @@
+---
+
+default_mpm_prefork_conf:
+  StartServers: 4
+  MinSpareServers: 4
+  MaxSpareServers: 6
+  MaxRequestWorkers: 20
+  MaxConnectionsPerChild: 1000
+
+mpm_prefork_conf: {}
