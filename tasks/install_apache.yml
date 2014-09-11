@@ -12,3 +12,9 @@
   notify:
     - restart apache
   sudo: yes
+
+- name: Enable mod_expires
+  shell: a2enmod expires creates=/etc/apache2/mods-enabled/expires.load
+  notify:
+    - restart apache
+  sudo: yes
