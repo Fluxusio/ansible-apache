@@ -18,3 +18,9 @@
   notify:
     - restart apache
   sudo: yes
+
+- name: Enable mod_deflate
+  shell: a2enmod deflate creates=/etc/apache2/mods-enabled/deflate.load
+  notify:
+    - restart apache
+  sudo: yes
