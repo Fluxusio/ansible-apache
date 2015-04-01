@@ -10,6 +10,18 @@
         Require all granted
     </Directory>
 
+    {% if item.alias is defined %}
+    Alias {{ item.alias.uri }} {{ item.alias.path }}
+    <Directory {{ item.alias.path }}>
+        Options -Indexes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+        Require all granted
+    </Directory>
+
+    {% endif %}
+
     # ----------------------------------------------------------------------
     # | Document modes |
     # ----------------------------------------------------------------------
